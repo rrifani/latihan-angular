@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'latihan-angular';
+  nama = 'Muhammad Reza Rifani';
 }
