@@ -1,0 +1,8 @@
+{
+    "products": [
+      { "id": 1, "name": "Apel" },
+      { "id": 2, "name": "Jeruk" },
+      { "id": 3, "name": "Mangga"},
+      { "id": 4, "name": "Jambu"}
+    ]
+  }

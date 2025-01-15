@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-product',
@@ -9,4 +10,14 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
+    // private productService : any;
+
+    productName : string = ""
+
+    constructor(private productService: ProductService){
+      this.productName = this.productService.productName;
+      // const service = new ProductService();
+      // this.productService = service;
+      // this.productName = this.productService.productName
+    }
 }
