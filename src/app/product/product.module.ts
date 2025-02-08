@@ -4,23 +4,35 @@ import { ProductComponent } from './product.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { ListProductComponent } from './list-product/list-product.component';
+import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes=[
   {
     path: '',
-    component: ProductComponent
+    component: ProductComponent,
+    children: [
+      {
+        path: '',
+        component: ListProductComponent
+      }
+    ]
   }
 ]
 
 @NgModule({
   declarations: [
-    ProductComponent
+    ProductComponent,
+    ListProductComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    HttpClientModule
   ],
   exports: [
     ProductComponent
